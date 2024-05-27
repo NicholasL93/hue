@@ -4,199 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HUE - Community Development Initiative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
-
         body {
             margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-            background-color: #f4f4f9;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
         }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            color: #FFFFFF;
         }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77b300 3px solid;
-        }
-
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-
-        header li {
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-
-        header #branding {
-            float: left;
-        }
-
-        header #branding h1 {
-            margin: 0;
-        }
-
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-
-        #showcase {
-            min-height: 400px;
-            background: url('https://via.placeholder.com/1200x400') no-repeat 0 -400px;
-            text-align: center;
-            color: #fff;
-        }
-
-        #showcase h1 {
-            font-size: 55px;
-            margin-top: 100px;
-        }
-
-        #showcase p {
-            font-size: 20px;
-        }
-
-        .button {
-            display: inline-block;
-            color: #333;
-            background: #77b300;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .button:hover {
-            background: #333;
-            color: #fff;
-        }
-
-        #values, #contact, #signup {
-            padding: 30px 0;
-            background: #e4e4e4;
-        }
-
-        #values h1, #contact h1, #signup h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .boxes {
+        .navbar {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #1C1C1C;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .box {
-            flex: 1;
-            padding: 20px;
-            margin: 10px;
-            text-align: center;
-            background: #fff;
-            border: #ddd 1px solid;
-            border-radius: 10px;
+        .navbar a {
+            color: #E0E0E0;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: bold;
         }
-
-        footer {
+        .navbar a:hover {
+            color: #76FF03;
+        }
+        .hero {
             text-align: center;
-            padding: 20px;
+            padding: 5rem 1rem;
+            background: linear-gradient(145deg, #1C1C1C, #212121);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #B0B0B0;
+        }
+        .btn-primary {
+            padding: 0.75rem 2rem;
+            background-color: #76FF03;
+            color: #121212;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .btn-primary:hover {
+            background-color: #64DD17;
+        }
+        .values, .contact, .signup {
+            padding: 3rem 2rem;
+            text-align: center;
+            background-color: #1C1C1C;
+        }
+        .values .value, .contact div, .signup div {
+            margin-bottom: 2rem;
+        }
+        .footer {
+            padding: 1rem 2rem;
+            text-align: center;
+            background-color: #212121;
+            color: #B0B0B0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .values .value, .contact div, .signup div {
             background: #333;
-            color: #fff;
-            margin-top: 20px;
+            padding: 1rem;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 300px;
         }
-
-        @media(max-width: 768px) {
-            header #branding, header nav, header nav ul, header nav ul li {
-                float: none;
-                text-align: center;
-                display: block;
-                width: 100%;
+        @media (min-width: 768px) {
+            .values .value, .contact div, .signup div {
+                max-width: 600px;
             }
-
-            .boxes {
-                flex-direction: column;
+        }
+        @media (min-width: 1024px) {
+            .values .value, .contact div, .signup div {
+                max-width: 800px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1>HUE</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#values">Values</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#signup">Sign Up</a></li>
-                </ul>
-            </nav>
+    <nav class="navbar">
+        <div>
+            <a href="#" style="font-size: 1.5rem;">HUE</a>
         </div>
+        <div>
+            <a href="#values">Values</a>
+            <a href="#contact">Contact</a>
+            <a href="#signup">Sign Up</a>
+        </div>
+    </nav>
+    <header class="hero">
+        <h1>Welcome to HUE</h1>
+        <p>Creating a safe space that activates hope, understanding, and enthusiasm for the sociological design of tomorrow.</p>
+        <a href="#signup" class="btn-primary">Join Our Community</a>
     </header>
-
-    <section id="showcase">
+    <section id="values" class="values">
         <div class="container">
-            <h1>Welcome to HUE</h1>
-            <p>Creating a safe space that activates hope, understanding, and enthusiasm for the sociological design of tomorrow.</p>
-            <a href="#signup" class="button">Join Our Community</a>
-        </div>
-    </section>
-
-    <section id="values">
-        <div class="container">
-            <h1>Our Core Values</h1>
-            <div class="boxes">
-                <div class="box">
-                    <h3>Be Great</h3>
-                    <p>Empathize in order to discuss the balance between perfection and imperfection.</p>
-                </div>
-                <div class="box">
-                    <h3>Be Unifying</h3>
-                    <p>Explore in order to minimize the impact of blind spots in our discovery process.</p>
-                </div>
-                <div class="box">
-                    <h3>Be Timeless</h3>
-                    <p>Innovate in order to define and hone the creative process involved in achievement.</p>
-                </div>
+            <h2>Our Core Values</h2>
+            <div class="value">
+                <h3>Be Great</h3>
+                <p>Empathize in order to discuss the balance between perfection and imperfection.</p>
+            </div>
+            <div class="value">
+                <h3>Be Unifying</h3>
+                <p>Explore in order to minimize the impact of blind spots in our discovery process.</p>
+            </div>
+            <div class="value">
+                <h3>Be Timeless</h3>
+                <p>Innovate in order to define and hone the creative process involved in achievement.</p>
             </div>
         </div>
     </section>
-
-    <section id="contact">
+    <section id="contact" class="contact">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Email: <a href="mailto:nicholaslzjr@gmail.com">nicholaslzjr@gmail.com</a></p>
+            <h2>Contact Us</h2>
+            <div>
+                <p>Email: <a href="mailto:nicholaslzjr@gmail.com" style="color: #76FF03;">nicholaslzjr@gmail.com</a></p>
+            </div>
         </div>
     </section>
-
-    <section id="signup">
+    <section id="signup" class="signup">
         <div class="container">
-            <h1>Join Our Community</h1>
-            <p>I'm excited to share insights and skills while learning from the diverse set of community members through webinars, workshops, and general discussions. Let's discover the engine for the progress we deeply desire at the core of our character, heart, and spirit. Sending a peaceful and positively charged welcome.</p>
-            <a href="http://eepurl.com/iNGsbo" class="button">Sign Up for Our Newsletter</a>
+            <h2>Join Our Community</h2>
+            <div>
+                <p>I'm excited to share insights and skills while learning from the diverse set of community members through webinars, workshops, and general discussions. Let's discover the engine for the progress we deeply desire at the core of our character, heart, and spirit. Sending a peaceful and positively charged welcome.</p>
+                <a href="http://eepurl.com/iNGsbo" class="btn-primary">Sign Up for Our Newsletter</a>
+            </div>
         </div>
     </section>
-
-    <footer>
-        <p>HUE Community Development Initiative &copy; 2024</p>
+    <footer class="footer">
+        <p>HUE Community Development Initiative © 2024</p>
     </footer>
 </body>
 </html>
