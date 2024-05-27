@@ -58,12 +58,12 @@
         .btn-primary:hover {
             background-color: #64DD17;
         }
-        .values, .contact, .signup {
+        .values, .contact, .actions, .signup {
             padding: 3rem 2rem;
             text-align: center;
             background-color: #1C1C1C;
         }
-        .values .value, .contact div, .signup div {
+        .values .value, .contact div, .actions .action, .signup div {
             margin-bottom: 2rem;
         }
         .footer {
@@ -79,7 +79,7 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        .values .value, .contact div, .signup div {
+        .values .value, .contact div, .actions .action, .signup div {
             background: #333;
             padding: 1rem;
             border-radius: 5px;
@@ -87,14 +87,24 @@
             max-width: 300px;
         }
         @media (min-width: 768px) {
-            .values .value, .contact div, .signup div {
+            .values .value, .contact div, .actions .action, .signup div {
                 max-width: 600px;
             }
         }
         @media (min-width: 1024px) {
-            .values .value, .contact div, .signup div {
+            .values .value, .contact div, .actions .action, .signup div {
                 max-width: 800px;
             }
+        }
+        .values .value h3, .actions .action h3 {
+            margin-bottom: 0.5rem;
+        }
+        .contact a {
+            color: #76FF03;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -105,6 +115,7 @@
         </div>
         <div>
             <a href="#values">Values</a>
+            <a href="#actions">Actions</a>
             <a href="#contact">Contact</a>
             <a href="#signup">Sign Up</a>
         </div>
@@ -119,15 +130,37 @@
             <h2>Our Core Values</h2>
             <div class="value">
                 <h3>Be Great</h3>
-                <p>Empathize in order to discuss the balance between perfection and imperfection.</p>
             </div>
             <div class="value">
                 <h3>Be Unifying</h3>
-                <p>Explore in order to minimize the impact of blind spots in our discovery process.</p>
             </div>
             <div class="value">
                 <h3>Be Timeless</h3>
-                <p>Innovate in order to define and hone the creative process involved in achievement.</p>
+            </div>
+        </div>
+    </section>
+    <section id="actions" class="actions">
+        <div class="container">
+            <h2>Our Actions</h2>
+            <div class="action">
+                <h3>Empathize</h3>
+                <p>We will empathize in order to discuss the balance between perfection and imperfection.</p>
+            </div>
+            <div class="action">
+                <h3>Explore</h3>
+                <p>We will explore in order to minimize the impact of blind spots in our discovery process.</p>
+            </div>
+            <div class="action">
+                <h3>Innovate</h3>
+                <p>We will innovate in order to define and hone the creative process involved in achievement.</p>
+            </div>
+            <div class="action">
+                <h3>Navigate</h3>
+                <p>We will navigate how to blend purpose and fulfillment with opportunity and drive.</p>
+            </div>
+            <div class="action">
+                <h3>Activate</h3>
+                <p>We will activate pure motivation, concentration, and conscious channeling into action.</p>
             </div>
         </div>
     </section>
@@ -135,7 +168,7 @@
         <div class="container">
             <h2>Contact Us</h2>
             <div>
-                <p>Email: <a href="mailto:nicholaslzjr@gmail.com" style="color: #76FF03;">nicholaslzjr@gmail.com</a></p>
+                <p>Email: <a href="mailto:nicholaslzjr@gmail.com">nicholaslzjr@gmail.com</a></p>
             </div>
         </div>
     </section>
